@@ -13,17 +13,17 @@ for i in range(0, n):
 	x.append(nro)
 
 #comando for para realizar a contagem de cada algarismo 				
-for c in range(0, n):
-	c0 += x[c].count("0")
-	c1 += x[c].count("1")
-	c2 += x[c].count("2")
-	c3 += x[c].count("3")
-	c4 += x[c].count("4")
-	c5 += x[c].count("5")
-	c6 += x[c].count("6")
-	c7 += x[c].count("7")
-	c8 += x[c].count("8")
-	c9 += x[c].count("9")
+for c in x:
+	c0 += c.count("0")
+	c1 += c.count("1")
+	c2 += c.count("2")
+	c3 += c.count("3")
+	c4 += c.count("4")
+	c5 += c.count("5")
+	c6 += c.count("6")
+	c7 += c.count("7")
+	c8 += c.count("8")
+	c9 += c.count("9")
 	
 #impressão dos resultados
 print("0 -> ", c0)
