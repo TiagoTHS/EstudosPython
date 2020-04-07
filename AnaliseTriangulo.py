@@ -21,9 +21,13 @@ else:
 		print("O triangulo é escaleno")
 	
 	#Retangulo
-	r = input("O triangulo possui um angulo de 90°? ").strip().upper()[0]
-	if r == 'S' :
-		print("Retangulo = True")
-	else:
-		print("Retangulo = False")
+	while True:
+	        r = str(input("O triangulo possui um angulo de 90°?  [S/N]")).strip().upper()[0]
+		if r in 'SN':
+			if r == 'S':
+				print("Retangulo = True")
+			else:
+				print("Retangulo = False")	
+			break
+		print("Escolha uma opcao valida!")
 	
