@@ -17,7 +17,8 @@ def verificar_diagonal():
 
 
 def verificar_empate():
-	if not VAZIO in tabuleiro:
+	if not VAZIO in tabuleiro and (verificar_horizontal == verificar_vertical 
+                                         == verificar_diagonal == False):
 		return True
 
 #tabuleiro
@@ -68,17 +69,14 @@ while jogavel:
 #verificar horizontal
 	if verificar_horizontal():
 		vencedor = tabuleiro[casa]
-		jogavel = False
 
 #verificar vertical
 	if verificar_vertical():
 		vencedor = tabuleiro[casa]
-		jogavel = False
 
 #verificar diagonal
 	if verificar_diagonal():
 		vencedor = tabuleiro[casa]
-		jogavel = False
 
 #verificar empate
 	if verificar_empate():
@@ -86,4 +84,5 @@ while jogavel:
 		print("Jogo empatado! DEU VELHA!")	
 	
 	if vencedor:
+		jogavel = False
 		print("Vencedor: ", vencedor)
