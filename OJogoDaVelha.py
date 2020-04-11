@@ -21,7 +21,7 @@ def verificar_jogo():
 			vencedor = tabuleiro[casa]
 	
 #verificar empate
-	if not VAZIO in tabuleiro:
+	if not VAZIO in tabuleiro and vencedor == False:
 		jogavel = False
 		print("Jogo empatado! DEU VELHA!")
 		return True	
