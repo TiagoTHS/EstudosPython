@@ -2,23 +2,22 @@ from random import randint
 from time import sleep
 
 def verificar_jogo():
-	casa = int()
 	vencedor = False
 	VAZIO = " "
 #verificar horizontal	
 	for i in range (0, 9, 3):
 		if (tabuleiro[i] == tabuleiro[i+1] == tabuleiro[i+2] != VAZIO):
-			vencedor = tabuleiro[casa]
+			vencedor = tabuleiro[i]
 	
 #verificar vertical
 	for i in range (3):
 		if (tabuleiro[i] == tabuleiro[i+3] == tabuleiro[i+6] != VAZIO):
-			vencedor = tabuleiro[casa]
+			vencedor = tabuleiro[i]
 	
 #verificar diagonal
 	for i in [0, 2]:
 		if (tabuleiro[0+i] == tabuleiro[4] == tabuleiro[8-i] != VAZIO):
-			vencedor = tabuleiro[casa]
+			vencedor = tabuleiro[i]
 	
 #verificar empate
 	if not VAZIO in tabuleiro and vencedor == False:
