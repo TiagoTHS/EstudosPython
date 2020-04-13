@@ -1,44 +1,25 @@
-n = int(input("Digite a quantidade de numeros que deseja analisar: "))
+def count_alg(num):
+	num = str(num)
+	for i in num:
+		x.append(i)
 
-#valor inicial zero para as variaveis contadoras
-c0 = c1 = c2 = c3 = c4 = c5 = c6 = c7 = c8 = c9 = 0
+n = int(input("Digite a quantidade de numeros que deseja analisar: "))
 
 #lista x
 x = []
 
-#comando for para ler os numeros e adicionar a 'x'
-for i in range(0, n):
-	num = int(input("Digite um numero inteiro: "))
-	nro = str(num)
-	x.append(nro)
-
-#comando for para realizar a contagem de cada algarismo 				
-for c in x:
-	c0 += c.count("0")
-	c1 += c.count("1")
-	c2 += c.count("2")
-	c3 += c.count("3")
-	c4 += c.count("4")
-	c5 += c.count("5")
-	c6 += c.count("6")
-	c7 += c.count("7")
-	c8 += c.count("8")
-	c9 += c.count("9")
-	
+for i in range(n):
+	nro = input("Digite um numero: ")
+	count_alg(nro)
+					
 #impressão dos resultados
-print("0 -> ", c0)
-print("1 -> ", c1)
-print("2 -> ", c2)
-print("3 -> ", c3)
-print("4 -> ", c4)
-print("5 -> ", c5)
-print("6 -> ", c6)
-print("7 -> ", c7)
-print("8 -> ", c8)
-print("9 -> ", c9)
-
-             
-
-
-	
-
+print("0 -> ", x.count('0'))
+print("1 -> ", x.count('1'))
+print("2 -> ", x.count('2'))
+print("3 -> ", x.count('3'))
+print("4 -> ", x.count('4'))
+print("5 -> ", x.count('5'))
+print("6 -> ", x.count('6'))
+print("7 -> ", x.count('7'))
+print("8 -> ", x.count('8'))
+print("9 -> ", x.count('9'))
