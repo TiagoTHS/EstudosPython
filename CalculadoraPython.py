@@ -1,5 +1,5 @@
 #Calculadora em que o usuário pode escolher a
-quantidade de números que deseja realizar a operação.
+#quantidade de números que deseja realizar a operação.
 
 def soma(list):
 	s = 0
