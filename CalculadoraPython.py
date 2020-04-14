@@ -45,10 +45,13 @@ while True:
 	print("Escolha uma opção válida!!")
 
 li = []
-q = int(input("Quantos numeros ira usar? "))
-for i in range (q):
-	n = int(input(f"{i+1}° Numero: "))
+while True:
+	n = int(input("Numero: "))
 	li.append(n)
+	if len(li) >= 2:	
+		t = input("Deseja usar mais numeros?").upper().strip()[0]
+		if t == "N":
+			break
 	
 if r == 1:
 	print("A soma é igual a", soma(li))
