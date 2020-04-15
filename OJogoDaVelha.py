@@ -1,4 +1,4 @@
-from random import randint
+from random import randint, choice
 from time import sleep
 
 def verificar_jogo():
@@ -21,12 +21,10 @@ def verificar_jogo():
 	
 #verificar empate
 	if not VAZIO in tabuleiro and vencedor == False:
-		jogavel = False
 		print("Jogo empatado! DEU VELHA!")
 		return True	
 		
 	if vencedor:
-		jogavel = False
 		print("Vencedor: ", vencedor)
 		return True
 
@@ -45,6 +43,7 @@ def contra_pc():
 	rodada = 0
 	jogavel = True
 	vencedor = False
+	casas_disp = [0, 1, 2, 3, 4, 5, 6, 7, 8]
 	while jogavel:	
 		rodada += 1
 		if rodada%2 == 1:
@@ -52,6 +51,7 @@ def contra_pc():
 			casa  = int(input("Escolha a casa: "))
 			if tabuleiro[casa] == VAZIO:
 				tabuleiro[casa] = jogador1
+				casas_disp.remove(casa)
 			else:
 				rodada -= 1
 				casa_invalida()
@@ -59,13 +59,14 @@ def contra_pc():
 			print("__{Minha vez!}__")
 			print("Deixe-me ver...")
 			sleep(1.5)
-			casa = randint(0,8)
+			casa = choice(casas_disp)
 			if tabuleiro[casa] == VAZIO:
 				tabuleiro[casa] = jogador2
+				casas_disp.remove(casa)
 			else:
 				rodada -= 1
 				casa_invalida()
-		
+
 		mostrar_tabuleiro()
 		if verificar_jogo():
 			jogavel = False
